@@ -1,0 +1,599 @@
+{
+  "chest": {
+    "bodyweight": [
+      {
+        "name": "Push-Ups",
+        "difficulty": "beginner",
+        "sets": "3-4",
+        "reps": "8-15",
+        "rest": "60-90s",
+        "form_tips": "Keep body straight, elbows at 45\u00b0, chest to floor, full range of motion",
+        "progression": "Add resistance band, elevate feet, add pause at bottom",
+        "alternatives": [
+          "Incline Push-Ups",
+          "Wide Push-Ups",
+          "Diamond Push-Ups"
+        ]
+      },
+      {
+        "name": "Diamond Push-Ups",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "8-12",
+        "rest": "90s",
+        "form_tips": "Hands form diamond shape, elbows tucked, slow controlled movement",
+        "progression": "Elevate feet, add resistance, increase tempo",
+        "alternatives": [
+          "Close-Grip Push-Ups",
+          "Tricep Push-Ups"
+        ]
+      },
+      {
+        "name": "Decline Push-Ups",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "8-15",
+        "rest": "90s",
+        "form_tips": "Feet elevated on chair/bench, maintain straight body, full range",
+        "progression": "Higher elevation, add weight, slow eccentric",
+        "alternatives": [
+          "Pike Push-Ups",
+          "Elevated Push-Ups"
+        ]
+      },
+      {
+        "name": "Pike Push-Ups",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "8-12",
+        "rest": "90s",
+        "form_tips": "Form inverted V, nose to floor between hands, elbows tucked",
+        "progression": "Elevate feet, move hands closer, full handstand push-up",
+        "alternatives": [
+          "Decline Push-Ups",
+          "Wall Handstand Hold"
+        ]
+      }
+    ],
+    "dumbbell": [
+      {
+        "name": "Dumbbell Floor Press",
+        "difficulty": "beginner",
+        "sets": "3-4",
+        "reps": "8-12",
+        "rest": "90-120s",
+        "form_tips": "Lie on floor, retract shoulder blades, elbows 45\u00b0, full lockout",
+        "progression": "Increase weight gradually, add pause, single arm variation",
+        "alternatives": [
+          "Dumbbell Bench Press",
+          "Dumbbell Flyes"
+        ]
+      },
+      {
+        "name": "Dumbbell Press",
+        "difficulty": "intermediate",
+        "sets": "3-4",
+        "reps": "8-12",
+        "rest": "2min",
+        "form_tips": "Retract shoulders, chest up, 45\u00b0 elbow angle, control descent",
+        "progression": "Increase weight, tempo training, alternating arms",
+        "alternatives": [
+          "Floor Press",
+          "Incline Dumbbell Press"
+        ]
+      },
+      {
+        "name": "Dumbbell Flyes",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "10-15",
+        "rest": "90s",
+        "form_tips": "Slight elbow bend, wide arc motion, squeeze at top",
+        "progression": "Increase weight, slow tempo, single arm",
+        "alternatives": [
+          "Cable Flyes",
+          "Floor Flyes"
+        ]
+      }
+    ],
+    "calisthenics": [
+      {
+        "name": "Dips (Using Chairs)",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "8-15",
+        "rest": "90-120s",
+        "form_tips": "Lean slightly forward, elbows tucked, full depth, controlled",
+        "progression": "Add weight in backpack, single leg, negative reps",
+        "alternatives": [
+          "Bench Dips",
+          "Dip Push-Ups"
+        ]
+      }
+    ]
+  },
+  "back": {
+    "bodyweight": [
+      {
+        "name": "Pull-Ups (Doorframe/Bar)",
+        "difficulty": "intermediate",
+        "sets": "3-4",
+        "reps": "6-12",
+        "rest": "2-3min",
+        "form_tips": "Overhand grip, full hang, chin over bar, controlled descent",
+        "progression": "Add weight, slow tempo, typewriter pull-ups",
+        "alternatives": [
+          "Chin-Ups",
+          "Negative Pull-Ups",
+          "Band-Assisted"
+        ]
+      },
+      {
+        "name": "Inverted Rows (Table/Door)",
+        "difficulty": "beginner",
+        "sets": "3-4",
+        "reps": "8-15",
+        "rest": "90s",
+        "form_tips": "Body straight, pull chest to bar, squeeze shoulder blades",
+        "progression": "Lower angle, elevate feet, add weight",
+        "alternatives": [
+          "Bed Sheet Rows",
+          "TRX Rows"
+        ]
+      },
+      {
+        "name": "Superman Holds",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "30-60s",
+        "rest": "60s",
+        "form_tips": "Lift chest and legs, squeeze glutes, hold position",
+        "progression": "Longer holds, add pulses, add weight",
+        "alternatives": [
+          "Back Extensions",
+          "Reverse Hypers"
+        ]
+      }
+    ],
+    "dumbbell": [
+      {
+        "name": "Dumbbell Rows",
+        "difficulty": "intermediate",
+        "sets": "3-4",
+        "reps": "8-12",
+        "rest": "90s",
+        "form_tips": "Support on bench/chair, pull to hip, squeeze at top, control",
+        "progression": "Increase weight, slow tempo, pause at top",
+        "alternatives": [
+          "Bent-Over Rows",
+          "Chest-Supported Rows"
+        ]
+      },
+      {
+        "name": "Dumbbell Pullovers",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "10-15",
+        "rest": "90s",
+        "form_tips": "Perpendicular to bench, stretch at bottom, pull with lats",
+        "progression": "Increase weight, floor variation, slow tempo",
+        "alternatives": [
+          "Straight-Arm Pulldown",
+          "Floor Pullovers"
+        ]
+      },
+      {
+        "name": "Renegade Rows",
+        "difficulty": "advanced",
+        "sets": "3",
+        "reps": "8-10/side",
+        "rest": "90s",
+        "form_tips": "Plank position, row without rotating, core engaged",
+        "progression": "Increase weight, add push-up between reps",
+        "alternatives": [
+          "Single Arm Rows",
+          "Plank Rows"
+        ]
+      }
+    ]
+  },
+  "shoulders": {
+    "bodyweight": [
+      {
+        "name": "Pike Push-Ups",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "8-12",
+        "rest": "90s",
+        "form_tips": "Inverted V position, nose to floor, vertical press path",
+        "progression": "Elevate feet, deficit, full handstand push-up",
+        "alternatives": [
+          "Wall Walks",
+          "Handstand Hold"
+        ]
+      },
+      {
+        "name": "Wall Handstand Push-Ups",
+        "difficulty": "advanced",
+        "sets": "3",
+        "reps": "5-10",
+        "rest": "2-3min",
+        "form_tips": "Heels against wall, controlled descent, full lockout",
+        "progression": "Freestanding, deficit, negative reps",
+        "alternatives": [
+          "Pike Push-Ups",
+          "Elevated Pike Push-Ups"
+        ]
+      }
+    ],
+    "dumbbell": [
+      {
+        "name": "Dumbbell Shoulder Press",
+        "difficulty": "intermediate",
+        "sets": "3-4",
+        "reps": "8-12",
+        "rest": "90-120s",
+        "form_tips": "Seated or standing, core tight, press straight up, full lockout",
+        "progression": "Increase weight, single arm, Arnold press",
+        "alternatives": [
+          "Military Press",
+          "Push Press"
+        ]
+      },
+      {
+        "name": "Lateral Raises",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "12-20",
+        "rest": "60s",
+        "form_tips": "Slight lean forward, raise to shoulder height, control descent",
+        "progression": "Increase weight, slow tempo, drop sets",
+        "alternatives": [
+          "Cable Lateral Raise",
+          "Band Lateral Raise"
+        ]
+      },
+      {
+        "name": "Front Raises",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "10-15",
+        "rest": "60s",
+        "form_tips": "Palms down, raise to eye level, no momentum",
+        "progression": "Increase weight, alternating arms, plate raises",
+        "alternatives": [
+          "Band Front Raise",
+          "Plate Front Raise"
+        ]
+      },
+      {
+        "name": "Bent-Over Rear Delt Flyes",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "12-15",
+        "rest": "60s",
+        "form_tips": "Hinge at hips, slight elbow bend, raise to sides, pinkies up",
+        "progression": "Increase weight, seated variation, slow tempo",
+        "alternatives": [
+          "Face Pulls",
+          "Reverse Pec Deck"
+        ]
+      }
+    ]
+  },
+  "legs": {
+    "bodyweight": [
+      {
+        "name": "Bodyweight Squats",
+        "difficulty": "beginner",
+        "sets": "3-4",
+        "reps": "15-25",
+        "rest": "60-90s",
+        "form_tips": "Feet shoulder-width, knees track toes, depth to parallel",
+        "progression": "Pause squats, jump squats, pistol squat progression",
+        "alternatives": [
+          "Goblet Squat",
+          "Bulgarian Split Squat"
+        ]
+      },
+      {
+        "name": "Lunges",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "10-15/leg",
+        "rest": "60s",
+        "form_tips": "Step length appropriate, knee doesn't pass toes, upright torso",
+        "progression": "Walking lunges, reverse lunges, jump lunges",
+        "alternatives": [
+          "Step-Ups",
+          "Split Squats"
+        ]
+      },
+      {
+        "name": "Bulgarian Split Squats",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "8-12/leg",
+        "rest": "90s",
+        "form_tips": "Rear foot elevated, front knee forward, 90% weight on front leg",
+        "progression": "Add weight, increase height, tempo training",
+        "alternatives": [
+          "Lunges",
+          "Step-Ups"
+        ]
+      },
+      {
+        "name": "Pistol Squats",
+        "difficulty": "advanced",
+        "sets": "3",
+        "reps": "5-10/leg",
+        "rest": "2min",
+        "form_tips": "Balance on one leg, extend other forward, squat deep",
+        "progression": "Weighted pistols, deficit pistols",
+        "alternatives": [
+          "Bulgarian Split Squat",
+          "Single-Leg Box Squat"
+        ]
+      },
+      {
+        "name": "Glute Bridges",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "15-20",
+        "rest": "60s",
+        "form_tips": "Feet close to glutes, thrust hips up, squeeze at top",
+        "progression": "Single-leg, elevated, add weight",
+        "alternatives": [
+          "Hip Thrusts",
+          "Single-Leg Glute Bridge"
+        ]
+      },
+      {
+        "name": "Nordic Curls",
+        "difficulty": "advanced",
+        "sets": "3",
+        "reps": "5-8",
+        "rest": "2min",
+        "form_tips": "Knees anchored, slow eccentric, use hands to catch",
+        "progression": "Less hand assistance, full range, weighted",
+        "alternatives": [
+          "Slider Hamstring Curls",
+          "Single-Leg Deadlift"
+        ]
+      }
+    ],
+    "dumbbell": [
+      {
+        "name": "Goblet Squats",
+        "difficulty": "beginner",
+        "sets": "3-4",
+        "reps": "10-15",
+        "rest": "90s",
+        "form_tips": "Hold dumbbell at chest, elbows down, full depth",
+        "progression": "Increase weight, pause at bottom, heels elevated",
+        "alternatives": [
+          "Bodyweight Squats",
+          "Front Squats"
+        ]
+      },
+      {
+        "name": "Dumbbell Romanian Deadlift",
+        "difficulty": "intermediate",
+        "sets": "3-4",
+        "reps": "8-12",
+        "rest": "90s",
+        "form_tips": "Slight knee bend, hinge at hips, keep back straight",
+        "progression": "Increase weight, single-leg variation, deficit",
+        "alternatives": [
+          "Barbell RDL",
+          "Good Mornings"
+        ]
+      },
+      {
+        "name": "Dumbbell Lunges",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "10-12/leg",
+        "rest": "90s",
+        "form_tips": "Dumbbells at sides, step and lower, knee tracks toe",
+        "progression": "Increase weight, walking lunges, deficit",
+        "alternatives": [
+          "Bodyweight Lunges",
+          "Bulgarian Split Squat"
+        ]
+      },
+      {
+        "name": "Single-Leg Calf Raises",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "12-20/leg",
+        "rest": "60s",
+        "form_tips": "Hold dumbbell, full range, pause at top, control descent",
+        "progression": "Increase weight, deficit for stretch, slow tempo",
+        "alternatives": [
+          "Double-Leg Calf Raises",
+          "Seated Calf Raises"
+        ]
+      }
+    ]
+  },
+  "arms": {
+    "bodyweight": [
+      {
+        "name": "Diamond Push-Ups",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "8-12",
+        "rest": "90s",
+        "form_tips": "Hands form diamond, elbows tucked, tricep focus",
+        "progression": "Elevate feet, add weight, slow tempo",
+        "alternatives": [
+          "Close-Grip Push-Ups",
+          "Bench Dips"
+        ]
+      },
+      {
+        "name": "Bench Dips",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "10-15",
+        "rest": "60s",
+        "form_tips": "Hands on bench, feet extended, lower until 90\u00b0",
+        "progression": "Elevate feet, add weight on lap, single leg",
+        "alternatives": [
+          "Chair Dips",
+          "Diamond Push-Ups"
+        ]
+      },
+      {
+        "name": "Chin-Ups",
+        "difficulty": "intermediate",
+        "sets": "3-4",
+        "reps": "6-12",
+        "rest": "2min",
+        "form_tips": "Underhand grip, full hang, pull to chin, squeeze biceps",
+        "progression": "Add weight, slow tempo, L-sit chin-ups",
+        "alternatives": [
+          "Pull-Ups",
+          "Inverted Rows"
+        ]
+      }
+    ],
+    "dumbbell": [
+      {
+        "name": "Dumbbell Bicep Curls",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "10-15",
+        "rest": "60s",
+        "form_tips": "Elbows locked at sides, full range, no swinging",
+        "progression": "Increase weight, slow tempo, 21s",
+        "alternatives": [
+          "Hammer Curls",
+          "Concentration Curls"
+        ]
+      },
+      {
+        "name": "Hammer Curls",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "10-15",
+        "rest": "60s",
+        "form_tips": "Neutral grip, elbows locked, full range",
+        "progression": "Increase weight, cross-body variation, alternating",
+        "alternatives": [
+          "Bicep Curls",
+          "Reverse Curls"
+        ]
+      },
+      {
+        "name": "Overhead Tricep Extension",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "10-15",
+        "rest": "60s",
+        "form_tips": "Elbows close to head, full stretch, controlled extension",
+        "progression": "Increase weight, single arm, slow tempo",
+        "alternatives": [
+          "Lying Tricep Extension",
+          "Kickbacks"
+        ]
+      },
+      {
+        "name": "Tricep Kickbacks",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "12-15",
+        "rest": "60s",
+        "form_tips": "Bend at hip, upper arm parallel to floor, extend fully",
+        "progression": "Increase weight, pause at top, both arms",
+        "alternatives": [
+          "Overhead Extension",
+          "Close-Grip Press"
+        ]
+      }
+    ]
+  },
+  "core": {
+    "bodyweight": [
+      {
+        "name": "Plank",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "30-60s",
+        "rest": "60s",
+        "form_tips": "Forearms down, body straight, squeeze glutes and core",
+        "progression": "Longer holds, single arm/leg, moving plank",
+        "alternatives": [
+          "RKC Plank",
+          "Side Plank"
+        ]
+      },
+      {
+        "name": "Mountain Climbers",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "20-30",
+        "rest": "60s",
+        "form_tips": "Plank position, drive knees to chest, maintain core tension",
+        "progression": "Faster tempo, cross-body, slider variation",
+        "alternatives": [
+          "Running in Place",
+          "High Knees"
+        ]
+      },
+      {
+        "name": "Hanging Leg Raises",
+        "difficulty": "advanced",
+        "sets": "3",
+        "reps": "8-15",
+        "rest": "90s",
+        "form_tips": "Hang from bar, control swing, raise legs to 90\u00b0",
+        "progression": "Toes to bar, L-sit hold, weighted",
+        "alternatives": [
+          "Lying Leg Raises",
+          "Knee Raises"
+        ]
+      },
+      {
+        "name": "V-Ups",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "10-15",
+        "rest": "60s",
+        "form_tips": "Simultaneous arms and legs, touch toes, control descent",
+        "progression": "Slower tempo, weighted, hold at top",
+        "alternatives": [
+          "Crunches",
+          "Bicycle Crunches"
+        ]
+      },
+      {
+        "name": "Russian Twists",
+        "difficulty": "intermediate",
+        "sets": "3",
+        "reps": "20-30",
+        "rest": "60s",
+        "form_tips": "Lean back slightly, rotate torso, touch floor each side",
+        "progression": "Hold weight, feet elevated, slower tempo",
+        "alternatives": [
+          "Bicycle Crunches",
+          "Side Plank"
+        ]
+      },
+      {
+        "name": "Dead Bug",
+        "difficulty": "beginner",
+        "sets": "3",
+        "reps": "10-15/side",
+        "rest": "60s",
+        "form_tips": "Back flat on floor, opposite arm and leg extend, core engaged",
+        "progression": "Add weight, slower tempo, hold position",
+        "alternatives": [
+          "Bird Dog",
+          "Hollow Body Hold"
+        ]
+      }
+    ]
+  }
+}
