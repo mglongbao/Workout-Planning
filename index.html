@@ -1,498 +1,203 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bảng Điều Khiển Luyện Tập Tương Tác</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8f7f4;
-            color: #333;
-        }
-        .nav-button.active {
-            background-color: #a5946d;
-            color: #ffffff;
-            font-weight: 600;
-        }
-        .duration-button.active {
-            background-color: #4a5568;
-            color: #ffffff;
-        }
-        .equipment-button.active {
-            background-color: #c7a17a;
-            color: #fff;
-        }
-        .card {
-            background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.07);
-        }
-        .youtube-link {
-            background-color: #FF0000;
-            color: white;
-            transition: background-color 0.3s;
-        }
-        .youtube-link:hover {
-            background-color: #c60000;
-        }
-    </style>
-    <!-- Chosen Palette: Warm Neutrals (Background: #f8f7f4, Primary Accent: #a5946d, Secondary Accent: #c7a17a, Text: #333) -->
-    <!-- Application Structure Plan: The application is designed as a task-oriented dashboard. The primary navigation is a tabbed interface for each day of the week (Monday-Sunday). This allows the user to quickly access the relevant workout for the current day. Within each day, users can select workout duration (15, 30, Full) and equipment (Dumbbell, Bodyweight). This nested filtering structure is intuitive and mirrors the user's decision-making process: "What day is it? How much time do I have? What equipment will I use?". Foundational principles like mobility and prehab are placed in their own persistent section for easy daily access, reinforcing their importance as described in the source report. This structure was chosen over a report-mimicking layout to prioritize usability and quick access to actionable workout plans. -->
-    <!-- Visualization & Content Choices: Report Info: Daily workout routines (Upper, Lower, Push, Pull, Legs) -> Goal: Provide a clear, actionable plan for each day -> Presentation Method: Interactive cards for each exercise within a daily schedule view -> Interaction: Users select a day, then filter by duration (15/30/Full) and equipment (Dumbbell/Bodyweight). The cards dynamically update to show the correct exercises, sets, reps, and video links. Justification: This card-based, filterable system is highly scannable and allows for immediate customization based on the user's daily context, directly addressing the core purpose of the source documents. Library/Method: Vanilla JavaScript for dynamic content rendering and state management. No charts are needed as the data is procedural, not statistical. -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <title>Home Workout Builder - Professional Training System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="antialiased">
-
-    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
-        <header class="text-center mb-8">
-            <h1 class="text-4xl font-bold text-[#a5946d]">Lịch Tập Luyện 5 Ngày/Tuần</h1>
-            <p class="mt-2 text-lg text-gray-600">Trình độ Trung cấp - Tùy chỉnh tại nhà</p>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🏋️ Home Workout Builder</h1>
+            <p class="tagline">Professional 5-Day Training System • No Gym Required</p>
         </header>
 
-        <main>
-            <div id="foundations" class="mb-8 p-6 card">
-                <h2 class="text-2xl font-bold mb-4 text-[#a5946d]">Nền Tảng Hàng Ngày & Hàng Tuần</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="p-4 bg-gray-50 rounded-lg">
-                        <h3 class="font-semibold text-lg mb-2">🤸 Giãn Cơ Hàng Ngày (5 phút)</h3>
-                        <p class="text-sm text-gray-600 mb-3">Thực hiện mỗi ngày để cải thiện sự linh hoạt và chống lại tác động của việc ngồi nhiều.</p>
-                        <ul class="list-disc list-inside text-sm space-y-1">
-                            <li><strong>Cat Cow:</strong> 60 giây</li>
-                            <li><strong>World's Greatest Stretch:</strong> 30 giây mỗi bên</li>
-                            <li><strong>Asian Squat:</strong> 60 giây (giữ & lắc lư)</li>
-                            <li><strong>Half Kneeling Thoracic Rotations:</strong> 30 giây mỗi bên</li>
-                            <li><strong>Wall Slides:</strong> 60 giây</li>
-                        </ul>
-                    </div>
-                    <div class="p-4 bg-gray-50 rounded-lg">
-                        <h3 class="font-semibold text-lg mb-2">🛡️ Phòng Ngừa Chấn Thương (Prehab)</h3>
-                        <p class="text-sm text-gray-600 mb-3">Thực hiện vào các ngày nghỉ (Thứ 4, Chủ Nhật) để tăng cường các cơ ổn định.</p>
-                        <ul class="list-disc list-inside text-sm space-y-1">
-                            <li><strong>(Weighted) Prone Arm Circles:</strong> 2 hiệp x 10-15 lần</li>
-                            <li><strong>Wall Slides:</strong> 2 hiệp x 10-15 lần</li>
-                            <li><strong>Banded Hip Abductions:</strong> 2 hiệp x 10-15 lần</li>
-                            <li><strong>Dead Hangs:</strong> 2 hiệp x 10-60 giây</li>
-                        </ul>
-                    </div>
-                    <div class="p-4 bg-gray-50 rounded-lg">
-                        <h3 class="font-semibold text-lg mb-2">🔥 Lịch Tập Bụng</h3>
-                        <p class="text-sm text-gray-600 mb-3">Luân phiên giữa 2 buổi, thực hiện vào ngày nghỉ (3 vòng, nghỉ 2 phút).</p>
-                        <div class="text-sm">
-                            <p class="font-medium">Bụng 1 (Thứ 4):</p>
-                            <ul class="list-disc list-inside ml-4 mb-2">
-                                <li>Standard Crunches: 30 giây</li>
-                                <li>Lying Reverse Crunches: 30 giây</li>
-                                <li>Plank Pull Through: 30 giây</li>
-                            </ul>
-                            <p class="font-medium">Bụng 2 (Chủ Nhật):</p>
-                            <ul class="list-disc list-inside ml-4">
-                                <li>V-Ups: 30 giây</li>
-                                <li>Plank Knee to Elbows: 30 giây</li>
-                                <li>Lying Leg Raise with Twist: 30 giây</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- Introduction -->
+        <section class="intro">
+            <h2>Welcome to Your Complete Home Workout System</h2>
+            <p>This science-based workout system is designed for intermediate athletes who want professional results from home. No barbells or machines required—just dumbbells, bodyweight, and determination.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>📅 5-Day Split</h3>
+                    <p>Optimized muscle group distribution for maximum growth and recovery</p>
+                </div>
+                <div class="feature">
+                    <h3>⏱️ Flexible Duration</h3>
+                    <p>Choose 15, 30, or 60-minute workouts based on your schedule</p>
+                </div>
+                <div class="feature">
+                    <h3>🎯 Equipment Options</h3>
+                    <p>Bodyweight, dumbbell, and calisthenics variations for every exercise</p>
+                </div>
+                <div class="feature">
+                    <h3>📈 Progressive Overload</h3>
+                    <p>Built-in progression system to continuously challenge your muscles</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workout Generator -->
+        <section class="generator">
+            <h2>Generate Your Workout</h2>
+            <p class="subtitle">Select your preferences below to create a customized workout plan</p>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="muscleGroup">Muscle Group</label>
+                    <select id="muscleGroup">
+                        <option value="">-- Select Muscle Group --</option>
+                        <option value="chest">Chest</option>
+                        <option value="back">Back</option>
+                        <option value="shoulders">Shoulders</option>
+                        <option value="legs">Legs</option>
+                        <option value="arms">Arms</option>
+                        <option value="core">Core/Abs</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="equipment">Equipment Type</label>
+                    <select id="equipment">
+                        <option value="">-- Select Equipment --</option>
+                        <option value="bodyweight">Bodyweight Only</option>
+                        <option value="dumbbell">Dumbbells</option>
+                        <option value="calisthenics">Calisthenics</option>
+                        <option value="all">All Equipment</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="duration">Workout Duration</label>
+                    <select id="duration">
+                        <option value="">-- Select Duration --</option>
+                        <option value="15">15 Minutes (Quick & Intense)</option>
+                        <option value="30">30 Minutes (Balanced)</option>
+                        <option value="60">60 Minutes (Full Session)</option>
+                    </select>
+                </div>
+
+                <div class="control-group">
+                    <label for="difficulty">Difficulty Level</label>
+                    <select id="difficulty">
+                        <option value="">-- Select Level --</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
                 </div>
             </div>
 
-            <div class="card p-6">
-                <div class="mb-6">
-                    <nav id="day-nav" class="flex flex-wrap justify-center gap-2">
-                    </nav>
+            <button id="generateBtn" class="btn-generate">Generate Workout</button>
+        </section>
+
+        <!-- Workout Display -->
+        <section id="workoutDisplay" class="workout-display hidden">
+            <h2>Your Customized Workout</h2>
+            <div id="workoutContent"></div>
+        </section>
+
+        <!-- Exercise Library -->
+        <section class="library">
+            <h2>Exercise Library</h2>
+            <p class="subtitle">Browse exercises by muscle group</p>
+
+            <div class="library-controls">
+                <button class="lib-btn active" data-muscle="all">All Exercises</button>
+                <button class="lib-btn" data-muscle="chest">Chest</button>
+                <button class="lib-btn" data-muscle="back">Back</button>
+                <button class="lib-btn" data-muscle="shoulders">Shoulders</button>
+                <button class="lib-btn" data-muscle="legs">Legs</button>
+                <button class="lib-btn" data-muscle="arms">Arms</button>
+                <button class="lib-btn" data-muscle="core">Core</button>
+            </div>
+
+            <div id="exerciseLibrary" class="exercise-grid"></div>
+        </section>
+
+        <!-- 5-Day Split Information -->
+        <section class="split-info">
+            <h2>Understanding the 5-Day Split</h2>
+            <div class="days-grid">
+                <div class="day-card">
+                    <h3>Day 1: Chest</h3>
+                    <p>Push-ups, dumbbell presses, flyes, dips</p>
+                    <p class="focus">Focus: Pectoral development</p>
                 </div>
-
-                <div id="workout-dashboard">
-                    <div class="text-center mb-6">
-                        <h2 id="workout-day-title" class="text-3xl font-bold"></h2>
-                        <p id="workout-day-subtitle" class="text-md text-gray-500 mt-1"></p>
-                    </div>
-
-                    <div id="controls" class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
-                        <div>
-                            <span class="text-sm font-medium text-gray-700 mr-2">Thời lượng:</span>
-                            <div id="duration-controls" class="inline-flex rounded-md shadow-sm" role="group">
-                            </div>
-                        </div>
-                        <div>
-                            <span class="text-sm font-medium text-gray-700 mr-2">Thiết bị:</span>
-                            <div id="equipment-controls" class="inline-flex rounded-md shadow-sm" role="group">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="workout-plan" class="space-y-4">
-                    </div>
-                    
-                    <div id="rest-day-content" class="text-center py-12 hidden">
-                        <h3 class="text-2xl font-semibold text-gray-700">Ngày Nghỉ Ngơi & Phục Hồi</h3>
-                        <p class="mt-2 text-gray-500">Hãy dành thời gian thực hiện các bài tập Bụng và Prehab ở trên nhé!</p>
-                    </div>
+                <div class="day-card">
+                    <h3>Day 2: Back</h3>
+                    <p>Pull-ups, rows, pullovers, lat work</p>
+                    <p class="focus">Focus: Lat width & thickness</p>
+                </div>
+                <div class="day-card">
+                    <h3>Day 3: Legs</h3>
+                    <p>Squats, lunges, deadlifts, calf raises</p>
+                    <p class="focus">Focus: Quad, hamstring, glute development</p>
+                </div>
+                <div class="day-card">
+                    <h3>Day 4: Shoulders & Arms</h3>
+                    <p>Overhead press, lateral raises, curls, extensions</p>
+                    <p class="focus">Focus: Deltoid roundness & arm mass</p>
+                </div>
+                <div class="day-card">
+                    <h3>Day 5: Core & Conditioning</h3>
+                    <p>Planks, V-ups, mountain climbers, circuits</p>
+                    <p class="focus">Focus: Core strength & endurance</p>
                 </div>
             </div>
-        </main>
+        </section>
 
-        <footer class="text-center mt-12 text-sm text-gray-500">
-            <p>Dựa trên chương trình Built With Science. Chúc bạn tập luyện hiệu quả!</p>
+        <!-- Training Tips -->
+        <section class="tips">
+            <h2>Training Guidelines</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <h3>🔥 Warm-Up Protocol</h3>
+                    <ul>
+                        <li>5 minutes light cardio (optional)</li>
+                        <li>Dynamic stretching (arm circles, leg swings)</li>
+                        <li>Warm-up sets: 50%, 70%, 90% of working weight</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>💪 Progressive Overload</h3>
+                    <ul>
+                        <li>Increase reps weekly (aim for top of range)</li>
+                        <li>Add weight when hitting rep targets</li>
+                        <li>Slow tempo for difficulty increase</li>
+                        <li>Track your workouts in a journal</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>⚡ Rest & Recovery</h3>
+                    <ul>
+                        <li>2 rest days per week minimum</li>
+                        <li>Never train same muscle 2 days in row</li>
+                        <li>Sleep 7-9 hours for optimal recovery</li>
+                        <li>Stretch after workouts</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>🎯 Form First</h3>
+                    <ul>
+                        <li>Perfect form over heavy weight</li>
+                        <li>Control both concentric and eccentric</li>
+                        <li>Full range of motion</li>
+                        <li>Mind-muscle connection</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Built with science-backed training principles • Track your progress • Stay consistent</p>
+            <p class="disclaimer">Always consult a physician before starting any exercise program. This is for educational purposes only.</p>
         </footer>
     </div>
 
-    <script>
-        const workoutData = {
-            monday: {
-                name: "Thứ Hai",
-                focus: "Thân Trên (Upper Body)",
-                workouts: {
-                    '15min': {
-                        method: "1 hiệp Rest-Pause, tổng 30 lần lặp",
-                        exercises: [
-                            { name: "Flat Press", dumbbell: "Flat Dumbbell Press", bodyweight: "Close Grip Push-Ups" },
-                            { name: "Chest Supported Row", dumbbell: "Dumbbell Chest Supported Row", bodyweight: "Bed Sheet Inverted Row" },
-                            { name: "Seated Shoulder Press", dumbbell: "Seated Dumbbell Shoulder Press", bodyweight: "Pike Push-Ups" },
-                            { name: "Lat Pulldowns", dumbbell: "3 Point Dumbbell Row", bodyweight: "Bed Sheet Lat Pulldown" }
-                        ]
-                    },
-                    '30min': {
-                        method: "Supersets & Trisets",
-                        exercises: [
-                            { name: "A1. Flat Press", sets: "3", reps: "8-10", dumbbell: "Flat Dumbbell Press", bodyweight: "Decline Close Grip Push-Ups" },
-                            { name: "A2. Chest Supported Row", sets: "3", reps: "8-10", dumbbell: "Dumbbell Chest Supported Row", bodyweight: "Bed Sheet Inverted Row" },
-                            { name: "B1. Standing Shoulder Press", sets: "3", reps: "6-8", dumbbell: "Standing Dumbbell Shoulder Press", bodyweight: "Pike Push-Ups" },
-                            { name: "B2. Pull-Ups", sets: "3", reps: "6-12", dumbbell: "3 Point Dumbbell Row", bodyweight: "Bed Sheet Lat Pulldown" },
-                            { name: "C1. Fly", sets: "3", reps: "10-15", dumbbell: "Dumbbell Fly", bodyweight: "Inner Chest Push Ups" },
-                            { name: "C2. Lateral Raises", sets: "3", reps: "15-20", dumbbell: "Dumbbell Lateral Raises", bodyweight: "Sliding Lateral Raises" }
-                        ]
-                    },
-                    'full': {
-                        method: "Hiệp thẳng, nghỉ 2-3 phút",
-                        exercises: [
-                            { name: "Flat Dumbbell Press", sets: "3", reps: "8-10", dumbbell: "Flat Dumbbell Press", bodyweight: "Decline Close Grip Push-Ups" },
-                            { name: "Dumbbell Chest Supported Row", sets: "3", reps: "10-12", dumbbell: "Dumbbell Chest Supported Row", bodyweight: "Bed Sheet Inverted Row" },
-                            { name: "Standing Dumbbell Shoulder Press", sets: "3", reps: "6-8", dumbbell: "Standing Dumbbell Shoulder Press", bodyweight: "Pike Push-Ups" },
-                            { name: "Lat Pulldowns", sets: "3", reps: "8-10", dumbbell: "Dumbbell Pullovers", bodyweight: "Bed Sheet Lat Pulldown" },
-                            { name: "Dumbbell Fly", sets: "3", reps: "10-15", dumbbell: "Dumbbell Fly", bodyweight: "Inner Chest Push Ups" },
-                            { name: "Dumbbell Lateral Raises", sets: "3", reps: "15-20", dumbbell: "Dumbbell Lateral Raises", bodyweight: "Sliding Lateral Raises" },
-                            { name: "Standing Face Pulls", sets: "2", reps: "10", dumbbell: "Bent Over Dumbbell Face Pulls", bodyweight: "Wall Slides" }
-                        ]
-                    }
-                }
-            },
-            tuesday: {
-                name: "Thứ Ba",
-                focus: "Thân Dưới 1 (Tập trung cơ đùi trước)",
-                workouts: {
-                    '15min': {
-                        method: "1 hiệp Rest-Pause, tổng 30 lần lặp",
-                        exercises: [
-                            { name: "Goblet Squat", reps: "30", dumbbell: "Goblet Squat", bodyweight: "Heel Elevated Goblet Squat" },
-                            { name: "Romanian Deadlift", reps: "30", dumbbell: "Dumbbell Romanian Deadlift", bodyweight: "Lying Reverse Hyperextensions" },
-                            { name: "Bulgarian Split Squat", reps: "30 mỗi bên", dumbbell: "Bulgarian Split Squat (Quad-focused)", bodyweight: "Assisted Single Leg Lunge" },
-                            { name: "Lying Leg Curls", reps: "30", dumbbell: "Dumbbell Lying Leg Curls", bodyweight: "Sliding Hamstring Curls" }
-                        ]
-                    },
-                    '30min': {
-                        method: "Supersets & Trisets",
-                        exercises: [
-                            { name: "A1. Goblet Squat", sets: "3", reps: "8-10", dumbbell: "Goblet Squat", bodyweight: "Heel Elevated Slow Eccentric Goblet Squat" },
-                            { name: "A2. Standing Face Pulls", sets: "3", reps: "10", dumbbell: "Bent Over Dumbbell Face Pulls", bodyweight: "Wall Slides" },
-                            { name: "B1. Dumbbell Romanian Deadlift", sets: "3", reps: "8-10", dumbbell: "Dumbbell Romanian Deadlift", bodyweight: "Lying Reverse Hyperextensions" },
-                            { name: "B2. Bulgarian Split Squat", sets: "3", reps: "8-10 mỗi bên", dumbbell: "Bulgarian Split Squat (Quad-focused)", bodyweight: "Assisted Single Leg Lunge" },
-                            { name: "C1. Dumbbell Lying Leg Curls", sets: "3", reps: "10-15", dumbbell: "Dumbbell Lying Leg Curls", bodyweight: "Sliding Hamstring Curls" },
-                            { name: "C2. Bodyweight Sissy Squat", sets: "3", reps: "10-15", dumbbell: "Bodyweight Sissy Squat", bodyweight: "Bodyweight Sissy Squat" }
-                        ]
-                    },
-                    'full': {
-                        method: "Hiệp thẳng, nghỉ 2-3 phút",
-                        exercises: [
-                            { name: "Dumbbell Goblet Squat", sets: "3", reps: "8-10", dumbbell: "Dumbbell Paused Goblet Squat", bodyweight: "Heel Elevated Slow Eccentric Goblet Squat" },
-                            { name: "A1. Dumbbell Romanian Deadlift", sets: "3", reps: "8-10", dumbbell: "Dumbbell Romanian Deadlift", bodyweight: "Lying Reverse Hyperextensions" },
-                            { name: "A2. Bodyweight Sissy Squat", sets: "3", reps: "10-15", dumbbell: "Bodyweight Sissy Squat", bodyweight: "Bodyweight Sissy Squat" },
-                            { name: "Walking Lunges (Quad-focused)", sets: "3", reps: "8-10 mỗi bên", dumbbell: "Walking Lunges (Quad-focused)", bodyweight: "Assisted Single Leg Lunge" },
-                            { name: "Standing Weighted Calf Raises", sets: "3", reps: "10-15", dumbbell: "Single Leg Weighted Calf Raise", bodyweight: "Single Leg Weighted Calf Raise" },
-                            { name: "Side Plank", sets: "2", reps: "30s mỗi bên", dumbbell: "Side Plank", bodyweight: "Side Plank" }
-                        ]
-                    }
-                }
-            },
-            wednesday: { name: "Thứ Tư", focus: "Nghỉ Ngơi", workouts: {} },
-            thursday: {
-                name: "Thứ Năm",
-                focus: "Đẩy (Push)",
-                workouts: {
-                    '15min': {
-                        method: "1 hiệp Rest-Pause, tổng 30 lần lặp",
-                        exercises: [
-                            { name: "Low Incline Press", reps: "30", dumbbell: "Low Incline Dumbbell Press", bodyweight: "Decline Close Grip Push-Ups" },
-                            { name: "Lying Incline Lateral Raise", reps: "30", dumbbell: "Lying Incline Lateral Raise", bodyweight: "Sliding Lateral Raises" },
-                            { name: "Fly", reps: "30", dumbbell: "Dumbbell Fly", bodyweight: "Inner Chest Push Ups" },
-                            { name: "Push-Ups", reps: "30", dumbbell: "Close-Grip Dumbbell Press", bodyweight: "Close-Grip Push-Ups" }
-                        ]
-                    },
-                    '30min': {
-                        method: "Supersets & Trisets",
-                        exercises: [
-                            { name: "A1. Low Incline Dumbbell Press", sets: "4", reps: "8-10", dumbbell: "Low Incline Dumbbell Press", bodyweight: "Decline Close Grip Push-Ups" },
-                            { name: "A2. Lying Incline Lateral Raise", sets: "4", reps: "15-20", dumbbell: "Lying Incline Lateral Raise", bodyweight: "Sliding Lateral Raises" },
-                            { name: "A3. Incline Overhead Extensions", sets: "4", reps: "10-15", dumbbell: "Incline Dumbbell Overhead Extensions", bodyweight: "Bodyweight Tricep Extensions" },
-                            { name: "B1. Flat Dumbbell Press", sets: "3", reps: "8-10", dumbbell: "Flat Dumbbell Press", bodyweight: "Close Grip Push-Ups" },
-                            { name: "B2. Dumbbell Fly", sets: "3", reps: "10-15", dumbbell: "Dumbbell Fly", bodyweight: "Inner Chest Push Ups" },
-                            { name: "B3. Close-Grip Push-Ups", sets: "3", reps: "10+", dumbbell: "Close-Grip Dumbbell Press", bodyweight: "Close-Grip Push-Ups" }
-                        ]
-                    },
-                    'full': {
-                        method: "Hiệp thẳng, nghỉ 2-3 phút",
-                        exercises: [
-                            { name: "Low Incline Dumbbell Press", sets: "3", reps: "8-10", dumbbell: "Low Incline Dumbbell Press", bodyweight: "Decline Close Grip Push-Ups" },
-                            { name: "Dumbbell Fly", sets: "3", reps: "10-15", dumbbell: "Dumbbell Fly", bodyweight: "Inner Chest Push Ups" },
-                            { name: "Flat Dumbbell Press", sets: "3", reps: "8-10", dumbbell: "Flat Dumbbell Press", bodyweight: "Close Grip Push-Ups" },
-                            { name: "Dumbbell Lateral Raises", sets: "3", reps: "15-20", dumbbell: "Dumbbell Lateral Raises", bodyweight: "Sliding Lateral Raises" },
-                            { name: "Incline Dumbbell Overhead Extensions", sets: "3", reps: "10-15", dumbbell: "Incline Dumbbell Overhead Extensions", bodyweight: "Bodyweight Tricep Extensions" },
-                            { name: "Close-Grip Dumbbell Press", sets: "3", reps: "8-10", dumbbell: "Close-Grip Dumbbell Press", bodyweight: "Dip Push Ups" }
-                        ]
-                    }
-                }
-            },
-            friday: {
-                name: "Thứ Sáu",
-                focus: "Kéo (Pull)",
-                workouts: {
-                    '15min': {
-                        method: "1 hiệp Rest-Pause, tổng 30 lần lặp (Pull-ups đến thất bại)",
-                        exercises: [
-                            { name: "Pull-Ups", reps: "đến thất bại", dumbbell: "Single Arm Dumbbell Row", bodyweight: "Bed Sheet Inverted Row" },
-                            { name: "Chest Supported Row (Lat-Focused)", reps: "30", dumbbell: "Chest Supported Dumbbell Row (Lat-Focused)", bodyweight: "Bed Sheet Inverted Row" },
-                            { name: "Chest Supported Rear Delt Row", reps: "30", dumbbell: "Chest Supported Dumbbell Rear Delt Row", bodyweight: "Bed Sheet High Row" },
-                            { name: "Standing Face Pulls", reps: "30", dumbbell: "Bent Over Dumbbell Face Pulls", bodyweight: "Wall Slides" }
-                        ]
-                    },
-                    '30min': {
-                        method: "Supersets & Trisets",
-                        exercises: [
-                            { name: "Lat Pulldowns", reps: "1 hiệp Rest-Pause, tổng 30", dumbbell: "Dumbbell Pullovers", bodyweight: "Bed Sheet Lat Pulldown" },
-                            { name: "A1. Chest Supported Row (Lat-Focused)", sets: "3", reps: "10-12", dumbbell: "Chest Supported Dumbbell Row (Lat-Focused)", bodyweight: "Bed Sheet Inverted Row" },
-                            { name: "A2. Bent Over Face Pulls", sets: "3", reps: "10-15", dumbbell: "Bent Over Dumbbell Face Pulls", bodyweight: "Bed Sheet Face Pulls" },
-                            { name: "B1. Chest Supported Rear Delt Row", sets: "3", reps: "10-15", dumbbell: "Chest Supported Dumbbell Rear Delt Row", bodyweight: "Bed Sheet High Row" },
-                            { name: "B2. Incline Curls", sets: "3", reps: "8-10", dumbbell: "Incline Dumbbell Curls", bodyweight: "Bed Sheet Curls" },
-                            { name: "B3. Spider Curls", sets: "3", reps: "8-10", dumbbell: "Dumbbell Spider Curls", bodyweight: "Standing Towel Bicep Curls" }
-                        ]
-                    },
-                    'full': {
-                        method: "Hiệp thẳng, nghỉ 2-3 phút",
-                        exercises: [
-                            { name: "(Weighted) Pull-Ups", sets: "3", reps: "6-12", dumbbell: "Single Arm Dumbbell Row", bodyweight: "Bed Sheet Inverted Row" },
-                            { name: "Chest Supported Row (Lat-Focused)", sets: "3", reps: "10-12", dumbbell: "Chest Supported Dumbbell Row (Lat-Focused)", bodyweight: "Bed Sheet Inverted Row" },
-                            { name: "Chest Supported Rear Delt Row", sets: "3", reps: "12-15", dumbbell: "Chest Supported Dumbbell Rear Delt Row", bodyweight: "Bed Sheet High Row" },
-                            { name: "Incline Dumbbell Curls", sets: "3", reps: "8-10", dumbbell: "Incline Dumbbell Curls", bodyweight: "Bed Sheet Curls" },
-                            { name: "Hammer Curls", sets: "3", reps: "8-10", dumbbell: "Hammer Curls", bodyweight: "Bed Sheet Hammer Curls" },
-                            { name: "Standing Face Pulls", sets: "2", reps: "10", dumbbell: "Bent Over Dumbbell Face Pulls", bodyweight: "Wall Slides" }
-                        ]
-                    }
-                }
-            },
-            saturday: {
-                name: "Thứ Bảy",
-                focus: "Thân Dưới 2 (Tập trung cơ mông)",
-                workouts: {
-                    '15min': {
-                        method: "1 hiệp Rest-Pause, tổng 30 lần lặp",
-                        exercises: [
-                            { name: "Front Foot Elevated Reverse Lunges", reps: "30 mỗi bên", dumbbell: "Front Foot Elevated Reverse Lunges", bodyweight: "Weighted Deficit Bulgarian Split Squat" },
-                            { name: "Hyperextensions (Glute focused)", reps: "30", dumbbell: "Dumbbell Romanian Deadlift", bodyweight: "Lying Reverse Hyperextensions" },
-                            { name: "Dumbbell Lying Leg Curls", reps: "30", dumbbell: "Dumbbell Lying Leg Curls", bodyweight: "Sliding Hamstring Curls" },
-                            { name: "Heel Elevated Goblet Squat", reps: "30", dumbbell: "Heel Elevated Goblet Squat", bodyweight: "Paused Goblet Squat" }
-                        ]
-                    },
-                    '30min': {
-                        method: "Supersets & Trisets",
-                        exercises: [
-                            { name: "Dumbbell Romanian Deadlift", sets: "3", reps: "6-8", dumbbell: "Dumbbell Romanian Deadlift", bodyweight: "Lying Reverse Hyperextensions" },
-                            { name: "A1. Front Foot Elevated Reverse Lunges", sets: "3", reps: "8-10 mỗi bên", dumbbell: "Front Foot Elevated Reverse Lunges", bodyweight: "Weighted Deficit Bulgarian Split Squat" },
-                            { name: "A2. Dumbbell Lying Leg Curls", sets: "3", reps: "10-15", dumbbell: "Dumbbell Lying Leg Curls", bodyweight: "Sliding Hamstring Curls" },
-                            { name: "B1. Single Leg Hip Thrusts", sets: "3", reps: "10-15", dumbbell: "(Weighted) Single Leg Hip Thrusts", bodyweight: "Weighted Single Leg Hip Thrust" },
-                            { name: "B2. Hip Abductions", sets: "3", reps: "12", dumbbell: "Side Lying Leg Raise", bodyweight: "Side Lying Leg Raise" },
-                            { name: "Standing Weighted Calf Raises", reps: "1 hiệp Rest-Pause, tổng 30", dumbbell: "Single Leg Weighted Calf Raise", bodyweight: "Single Leg Weighted Calf Raise" }
-                        ]
-                    },
-                    'full': {
-                        method: "Hiệp thẳng, nghỉ 2-3 phút",
-                        exercises: [
-                            { name: "Dumbbell Romanian Deadlift", sets: "3", reps: "6-8", dumbbell: "Dumbbell Romanian Deadlift", bodyweight: "Lying Reverse Hyperextensions" },
-                            { name: "Bulgarian Split Squat (Glute-focused)", sets: "3", reps: "8-10 mỗi bên", dumbbell: "Bulgarian Split Squat (Glute-focused)", bodyweight: "Weighted Deficit Bulgarian Split Squat" },
-                            { name: "(Weighted) Single Leg Hip Thrusts", sets: "3", reps: "10-15", dumbbell: "(Weighted) Single Leg Hip Thrusts", bodyweight: "Weighted Single Leg Hip Thrust" },
-                            { name: "Dumbbell Lying Leg Curls", sets: "3", reps: "10-15", dumbbell: "Dumbbell Lying Leg Curls", bodyweight: "Sliding Hamstring Curls" },
-                            { name: "A1. Side Lying Leg Raise", sets: "3", reps: "12", dumbbell: "Side Lying Leg Raise", bodyweight: "Side Lying Leg Raise" },
-                            { name: "A2. Seated Weighted Calf Raises", sets: "3", reps: "8-10", dumbbell: "Seated Weighted Calf Raises", bodyweight: "Seated Bodyweight Calf Raises" }
-                        ]
-                    }
-                }
-            },
-            sunday: { name: "Chủ Nhật", focus: "Nghỉ Ngơi", workouts: {} }
-        };
-
-        let currentState = {
-            day: 'monday',
-            duration: 'full',
-            equipment: 'dumbbell'
-        };
-
-        const dayNav = document.getElementById('day-nav');
-        const durationControls = document.getElementById('duration-controls');
-        const equipmentControls = document.getElementById('equipment-controls');
-        const workoutDayTitle = document.getElementById('workout-day-title');
-        const workoutDaySubtitle = document.getElementById('workout-day-subtitle');
-        const workoutPlan = document.getElementById('workout-plan');
-        const controlsDiv = document.getElementById('controls');
-        const restDayContent = document.getElementById('rest-day-content');
-
-        function render() {
-            const dayData = workoutData[currentState.day];
-            
-            updateNavButtons();
-            
-            workoutDayTitle.textContent = dayData.name;
-            workoutDaySubtitle.textContent = dayData.focus;
-
-            if (dayData.focus === 'Nghỉ Ngơi') {
-                controlsDiv.classList.add('hidden');
-                workoutPlan.classList.add('hidden');
-                restDayContent.classList.remove('hidden');
-                return;
-            }
-            
-            controlsDiv.classList.remove('hidden');
-            workoutPlan.classList.remove('hidden');
-            restDayContent.classList.add('hidden');
-
-            updateDurationButtons();
-            updateEquipmentButtons();
-            renderWorkoutPlan();
-        }
-
-        function updateNavButtons() {
-            dayNav.innerHTML = Object.keys(workoutData).map(dayKey => {
-                const day = workoutData[dayKey];
-                const isActive = dayKey === currentState.day ? 'active' : '';
-                return `<button data-day="${dayKey}" class="nav-button ${isActive} px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-[#a5946d] transition-colors">${day.name}</button>`;
-            }).join('');
-        }
-
-        function updateDurationButtons() {
-            const durations = [
-                { key: '15min', label: '15 phút' },
-                { key: '30min', label: '30 phút' },
-                { key: 'full', label: 'Toàn diện' }
-            ];
-            durationControls.innerHTML = durations.map((d, i) => {
-                const isActive = d.key === currentState.duration ? 'active' : '';
-                let roundedClass = '';
-                if (i === 0) roundedClass = 'rounded-l-lg';
-                if (i === durations.length - 1) roundedClass = 'rounded-r-lg';
-                if (durations.length === 1) roundedClass = 'rounded-lg';
-                return `<button type="button" data-duration="${d.key}" class="duration-button ${isActive} ${roundedClass} px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700">${d.label}</button>`;
-            }).join('');
-        }
-        
-        function updateEquipmentButtons() {
-            const equipments = [
-                { key: 'dumbbell', label: 'Tạ Dumbbell' },
-                { key: 'bodyweight', label: 'Bodyweight' }
-            ];
-            equipmentControls.innerHTML = equipments.map((e, i) => {
-                const isActive = e.key === currentState.equipment ? 'active' : '';
-                let roundedClass = '';
-                if (i === 0) roundedClass = 'rounded-l-lg';
-                if (i === equipments.length - 1) roundedClass = 'rounded-r-lg';
-                if (equipments.length === 1) roundedClass = 'rounded-lg';
-                return `<button type="button" data-equipment="${e.key}" class="equipment-button ${isActive} ${roundedClass} px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 hover:bg-gray-100 focus:z-10 focus:ring-2 focus:ring-blue-700">${e.label}</button>`;
-            }).join('');
-        }
-
-        function renderWorkoutPlan() {
-            const plan = workoutData[currentState.day].workouts[currentState.duration];
-            if (!plan) {
-                workoutPlan.innerHTML = '<p class="text-center text-gray-500">Không có kế hoạch tập luyện cho lựa chọn này.</p>';
-                return;
-            }
-
-            let setsRepsHeader = '';
-            if (currentState.duration === '15min') {
-                setsRepsHeader = plan.method;
-            } else {
-                setsRepsHeader = plan.exercises[0].sets ? 'Hiệp x Lần lặp' : plan.method;
-            }
-
-            workoutPlan.innerHTML = `
-                <div class="text-center mb-4">
-                    <p class="text-sm text-gray-500"><strong>Phương pháp:</strong> ${plan.method}</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    ${plan.exercises.map(ex => createExerciseCard(ex)).join('')}
-                </div>
-            `;
-        }
-
-        function createExerciseCard(exercise) {
-            const exerciseName = exercise[currentState.equipment];
-            const searchQuery = encodeURIComponent(exerciseName);
-            const youtubeSearchUrl = `https://www.youtube.com/results?search_query=${searchQuery}`;
-            let setsReps = '';
-            if(currentState.duration === '15min') {
-                setsReps = exercise.reps;
-            } else {
-                setsReps = exercise.sets ? `${exercise.sets} x ${exercise.reps}` : exercise.reps;
-            }
-
-            return `
-                <div class="p-5 border rounded-xl bg-gray-50 flex flex-col justify-between">
-                    <div>
-                        <h4 class="font-bold text-lg text-gray-800">${exercise.name}</h4>
-                        <p class="text-md text-[#c7a17a] font-semibold mb-2">${exerciseName}</p>
-                        <p class="text-sm text-gray-600 mb-4"><strong>Số lần tập:</strong> ${setsReps}</p>
-                    </div>
-                    <a href="${youtubeSearchUrl}" target="_blank" class="youtube-link mt-auto block w-full text-center py-2 px-4 rounded-md font-semibold text-sm">
-                        Tìm trên YouTube
-                    </a>
-                </div>
-            `;
-        }
-
-        dayNav.addEventListener('click', e => {
-            if (e.target.matches('button[data-day]')) {
-                currentState.day = e.target.dataset.day;
-                render();
-            }
-        });
-
-        durationControls.addEventListener('click', e => {
-            if (e.target.matches('button[data-duration]')) {
-                currentState.duration = e.target.dataset.duration;
-                render();
-            }
-        });
-        
-        equipmentControls.addEventListener('click', e => {
-            if (e.target.matches('button[data-equipment]')) {
-                currentState.equipment = e.target.dataset.equipment;
-                render();
-            }
-        });
-
-        function initialize() {
-            const today = new Date().getDay();
-            const dayKeys = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
-            currentState.day = dayKeys[today];
-            render();
-        }
-
-        initialize();
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
