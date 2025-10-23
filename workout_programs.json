@@ -1,0 +1,758 @@
+{
+  "15_minute": {
+    "day1_chest": {
+      "duration": "15 min",
+      "focus": "Chest",
+      "warmup": "5 min dynamic stretching (arm circles, band pull-aparts)",
+      "method": "Rest-pause (30 total reps with 15-20s rest between mini-sets)",
+      "exercises": [
+        {
+          "name": "Push-Ups",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "bodyweight",
+          "notes": "Use rest-pause method"
+        },
+        {
+          "name": "Dumbbell Floor Press",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "dumbbell",
+          "notes": "Rest-pause, moderate weight"
+        },
+        {
+          "name": "Diamond Push-Ups",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "bodyweight",
+          "notes": "Focus on triceps"
+        },
+        {
+          "name": "Pike Push-Ups",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "bodyweight",
+          "notes": "Upper chest emphasis"
+        }
+      ],
+      "cooldown": "30s rest between exercises"
+    },
+    "day2_back": {
+      "duration": "15 min",
+      "focus": "Back",
+      "warmup": "5 min (band pull-aparts, arm circles)",
+      "exercises": [
+        {
+          "name": "Pull-Ups/Chin-Ups",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "bodyweight",
+          "notes": "Band assistance if needed"
+        },
+        {
+          "name": "Inverted Rows",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "bodyweight",
+          "notes": "Use table or door"
+        },
+        {
+          "name": "Dumbbell Rows",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "dumbbell",
+          "notes": "Single arm, rest-pause"
+        },
+        {
+          "name": "Superman Holds",
+          "sets": "1",
+          "reps": "3x20s",
+          "equipment": "bodyweight",
+          "notes": "Isometric hold"
+        }
+      ]
+    },
+    "day3_legs": {
+      "duration": "15 min",
+      "focus": "Legs",
+      "exercises": [
+        {
+          "name": "Goblet Squats",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "dumbbell",
+          "notes": "2-3s pause at bottom"
+        },
+        {
+          "name": "Dumbbell RDL",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "dumbbell",
+          "notes": "Focus on hamstrings"
+        },
+        {
+          "name": "Bulgarian Split Squats",
+          "sets": "1",
+          "reps": "30 total/leg",
+          "equipment": "bodyweight",
+          "notes": "Alternate legs"
+        },
+        {
+          "name": "Calf Raises",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "bodyweight",
+          "notes": "Single leg if possible"
+        }
+      ]
+    },
+    "day4_shoulders": {
+      "duration": "15 min",
+      "focus": "Shoulders & Arms",
+      "exercises": [
+        {
+          "name": "Dumbbell Shoulder Press",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "dumbbell",
+          "notes": "Rest-pause method"
+        },
+        {
+          "name": "Lateral Raises",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "dumbbell",
+          "notes": "Light weight, control"
+        },
+        {
+          "name": "Pike Push-Ups",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "bodyweight",
+          "notes": "Shoulder focus"
+        },
+        {
+          "name": "Dumbbell Curls",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "dumbbell",
+          "notes": "Biceps"
+        }
+      ]
+    },
+    "day5_fullbody": {
+      "duration": "15 min",
+      "focus": "Full Body & Core",
+      "exercises": [
+        {
+          "name": "Burpees",
+          "sets": "1",
+          "reps": "20",
+          "equipment": "bodyweight",
+          "notes": "Full body compound"
+        },
+        {
+          "name": "V-Ups",
+          "sets": "1",
+          "reps": "30 total",
+          "equipment": "bodyweight",
+          "notes": "Core focus"
+        },
+        {
+          "name": "Plank",
+          "sets": "1",
+          "reps": "60s hold",
+          "equipment": "bodyweight",
+          "notes": "Maintain form"
+        },
+        {
+          "name": "Mountain Climbers",
+          "sets": "1",
+          "reps": "40 total",
+          "equipment": "bodyweight",
+          "notes": "20 each leg"
+        }
+      ]
+    }
+  },
+  "30_minute": {
+    "day1_chest": {
+      "duration": "30 min",
+      "focus": "Chest",
+      "warmup": "5-7 min (cardio + dynamic stretching)",
+      "method": "Supersets (A1/A2)",
+      "exercises": [
+        {
+          "name": "Push-Ups",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Standard or decline"
+        },
+        {
+          "name": "Dumbbell Floor Press",
+          "sets": "3",
+          "reps": "10-12",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Superset with push-ups"
+        },
+        {
+          "name": "Dumbbell Flyes",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Floor or bench"
+        },
+        {
+          "name": "Diamond Push-Ups",
+          "sets": "3",
+          "reps": "10-12",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Tricep emphasis"
+        },
+        {
+          "name": "Plank",
+          "sets": "2",
+          "reps": "45-60s",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Core finisher"
+        }
+      ]
+    },
+    "day2_back": {
+      "duration": "30 min",
+      "focus": "Back",
+      "exercises": [
+        {
+          "name": "Pull-Ups",
+          "sets": "3-4",
+          "reps": "6-10",
+          "equipment": "bodyweight",
+          "rest": "2min",
+          "notes": "Band assist if needed"
+        },
+        {
+          "name": "Dumbbell Rows",
+          "sets": "3",
+          "reps": "10-12/arm",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Single arm"
+        },
+        {
+          "name": "Inverted Rows",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Table or door"
+        },
+        {
+          "name": "Dumbbell Pullovers",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Lat focus"
+        },
+        {
+          "name": "Superman Holds",
+          "sets": "3",
+          "reps": "20-30s",
+          "equipment": "bodyweight",
+          "rest": "45s",
+          "notes": "Lower back"
+        }
+      ]
+    },
+    "day3_legs": {
+      "duration": "30 min",
+      "focus": "Legs",
+      "exercises": [
+        {
+          "name": "Goblet Squats",
+          "sets": "4",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Pause at bottom"
+        },
+        {
+          "name": "Dumbbell RDL",
+          "sets": "3",
+          "reps": "10-12",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Hamstrings"
+        },
+        {
+          "name": "Bulgarian Split Squats",
+          "sets": "3",
+          "reps": "10-12/leg",
+          "equipment": "bodyweight/dumbbell",
+          "rest": "60s/leg",
+          "notes": "Rear foot elevated"
+        },
+        {
+          "name": "Glute Bridges",
+          "sets": "3",
+          "reps": "15-20",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Add weight if possible"
+        },
+        {
+          "name": "Single-Leg Calf Raises",
+          "sets": "3",
+          "reps": "15-20/leg",
+          "equipment": "dumbbell",
+          "rest": "45s",
+          "notes": "Hold dumbbell"
+        }
+      ]
+    },
+    "day4_shoulders": {
+      "duration": "30 min",
+      "focus": "Shoulders & Arms",
+      "exercises": [
+        {
+          "name": "Dumbbell Shoulder Press",
+          "sets": "3-4",
+          "reps": "10-12",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Seated or standing"
+        },
+        {
+          "name": "Lateral Raises",
+          "sets": "3",
+          "reps": "15-20",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Light weight"
+        },
+        {
+          "name": "Front Raises",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Alternating arms"
+        },
+        {
+          "name": "Bent-Over Rear Delt Flyes",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Pinkies up"
+        },
+        {
+          "name": "Dumbbell Curls",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Biceps"
+        },
+        {
+          "name": "Tricep Kickbacks",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Full extension"
+        }
+      ]
+    },
+    "day5_core": {
+      "duration": "30 min",
+      "focus": "Core & Conditioning",
+      "exercises": [
+        {
+          "name": "V-Ups",
+          "sets": "3",
+          "reps": "15-20",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Full range"
+        },
+        {
+          "name": "Russian Twists",
+          "sets": "3",
+          "reps": "30-40",
+          "equipment": "bodyweight/dumbbell",
+          "rest": "60s",
+          "notes": "Hold weight"
+        },
+        {
+          "name": "Plank",
+          "sets": "3",
+          "reps": "60s",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "RKC or standard"
+        },
+        {
+          "name": "Mountain Climbers",
+          "sets": "3",
+          "reps": "30-40",
+          "equipment": "bodyweight",
+          "rest": "45s",
+          "notes": "Controlled pace"
+        },
+        {
+          "name": "Dead Bug",
+          "sets": "3",
+          "reps": "12-15/side",
+          "equipment": "bodyweight",
+          "rest": "45s",
+          "notes": "Core stability"
+        },
+        {
+          "name": "Bicycle Crunches",
+          "sets": "3",
+          "reps": "20-30",
+          "equipment": "bodyweight",
+          "rest": "45s",
+          "notes": "Obliques"
+        }
+      ]
+    }
+  },
+  "60_minute": {
+    "day1_chest": {
+      "duration": "60 min",
+      "focus": "Chest",
+      "warmup": "10 min (5min cardio, 5min dynamic stretching, warm-up sets)",
+      "exercises": [
+        {
+          "name": "Push-Ups",
+          "sets": "4",
+          "reps": "12-20",
+          "equipment": "bodyweight",
+          "rest": "90s",
+          "notes": "Various grips"
+        },
+        {
+          "name": "Dumbbell Floor Press",
+          "sets": "4",
+          "reps": "8-12",
+          "equipment": "dumbbell",
+          "rest": "2min",
+          "notes": "Heavy weight"
+        },
+        {
+          "name": "Incline Push-Ups",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "bodyweight",
+          "rest": "90s",
+          "notes": "Upper chest"
+        },
+        {
+          "name": "Dumbbell Flyes",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Squeeze at top"
+        },
+        {
+          "name": "Diamond Push-Ups",
+          "sets": "3",
+          "reps": "10-15",
+          "equipment": "bodyweight",
+          "rest": "90s",
+          "notes": "Inner chest"
+        },
+        {
+          "name": "Dips (Chairs)",
+          "sets": "3",
+          "reps": "8-12",
+          "equipment": "bodyweight",
+          "rest": "90s",
+          "notes": "Lower chest"
+        },
+        {
+          "name": "Cable Crossovers/Resistance",
+          "sets": "2",
+          "reps": "15-20",
+          "equipment": "resistance",
+          "rest": "60s",
+          "notes": "Finisher"
+        }
+      ],
+      "cooldown": "5 min stretching"
+    },
+    "day2_back": {
+      "duration": "60 min",
+      "focus": "Back",
+      "exercises": [
+        {
+          "name": "Pull-Ups",
+          "sets": "4",
+          "reps": "8-12",
+          "equipment": "bodyweight",
+          "rest": "2-3min",
+          "notes": "Wide and close grip"
+        },
+        {
+          "name": "Dumbbell Rows",
+          "sets": "4",
+          "reps": "10-12/arm",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Heavy"
+        },
+        {
+          "name": "Inverted Rows",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "bodyweight",
+          "rest": "90s",
+          "notes": "Various angles"
+        },
+        {
+          "name": "Dumbbell Pullovers",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Lat stretch"
+        },
+        {
+          "name": "Renegade Rows",
+          "sets": "3",
+          "reps": "10/side",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Core engaged"
+        },
+        {
+          "name": "Superman Holds",
+          "sets": "3",
+          "reps": "30-45s",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Lower back"
+        },
+        {
+          "name": "Dead Hangs",
+          "sets": "2",
+          "reps": "30-60s",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Grip strength"
+        }
+      ]
+    },
+    "day3_legs": {
+      "duration": "60 min",
+      "focus": "Legs",
+      "exercises": [
+        {
+          "name": "Goblet Squats",
+          "sets": "4",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "2min",
+          "notes": "Heavy, deep"
+        },
+        {
+          "name": "Dumbbell RDL",
+          "sets": "4",
+          "reps": "10-12",
+          "equipment": "dumbbell",
+          "rest": "2min",
+          "notes": "Hamstrings"
+        },
+        {
+          "name": "Bulgarian Split Squats",
+          "sets": "3",
+          "reps": "10-12/leg",
+          "equipment": "dumbbell",
+          "rest": "90s/leg",
+          "notes": "Rear elevated"
+        },
+        {
+          "name": "Walking Lunges",
+          "sets": "3",
+          "reps": "12-15/leg",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Continuous"
+        },
+        {
+          "name": "Single-Leg Deadlifts",
+          "sets": "3",
+          "reps": "10/leg",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Balance"
+        },
+        {
+          "name": "Glute Bridges",
+          "sets": "3",
+          "reps": "15-20",
+          "equipment": "bodyweight/dumbbell",
+          "rest": "60s",
+          "notes": "Hip thrust variation"
+        },
+        {
+          "name": "Calf Raises",
+          "sets": "4",
+          "reps": "15-20",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Single or double leg"
+        }
+      ]
+    },
+    "day4_shoulders": {
+      "duration": "60 min",
+      "focus": "Shoulders & Arms",
+      "exercises": [
+        {
+          "name": "Dumbbell Shoulder Press",
+          "sets": "4",
+          "reps": "10-12",
+          "equipment": "dumbbell",
+          "rest": "2min",
+          "notes": "Heavy"
+        },
+        {
+          "name": "Lateral Raises",
+          "sets": "4",
+          "reps": "15-20",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Drop sets possible"
+        },
+        {
+          "name": "Front Raises",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Alternating"
+        },
+        {
+          "name": "Bent-Over Rear Delt Flyes",
+          "sets": "3",
+          "reps": "15-20",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Light weight"
+        },
+        {
+          "name": "Dumbbell Bicep Curls",
+          "sets": "4",
+          "reps": "10-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Various grips"
+        },
+        {
+          "name": "Hammer Curls",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Neutral grip"
+        },
+        {
+          "name": "Overhead Tricep Extension",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Full stretch"
+        },
+        {
+          "name": "Tricep Kickbacks",
+          "sets": "3",
+          "reps": "12-15",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Peak contraction"
+        }
+      ]
+    },
+    "day5_fullbody_core": {
+      "duration": "60 min",
+      "focus": "Full Body & Core",
+      "exercises": [
+        {
+          "name": "Burpees",
+          "sets": "3",
+          "reps": "15-20",
+          "equipment": "bodyweight",
+          "rest": "90s",
+          "notes": "Full body"
+        },
+        {
+          "name": "Goblet Squats",
+          "sets": "3",
+          "reps": "15",
+          "equipment": "dumbbell",
+          "rest": "90s",
+          "notes": "Moderate weight"
+        },
+        {
+          "name": "Push-Ups",
+          "sets": "3",
+          "reps": "15-20",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Standard"
+        },
+        {
+          "name": "V-Ups",
+          "sets": "4",
+          "reps": "15-20",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Core"
+        },
+        {
+          "name": "Russian Twists",
+          "sets": "3",
+          "reps": "40-50",
+          "equipment": "dumbbell",
+          "rest": "60s",
+          "notes": "Hold weight"
+        },
+        {
+          "name": "Plank",
+          "sets": "3",
+          "reps": "60-90s",
+          "equipment": "bodyweight",
+          "rest": "60s",
+          "notes": "Various positions"
+        },
+        {
+          "name": "Mountain Climbers",
+          "sets": "3",
+          "reps": "40-50",
+          "equipment": "bodyweight",
+          "rest": "45s",
+          "notes": "Fast pace"
+        },
+        {
+          "name": "Hanging Leg Raises",
+          "sets": "3",
+          "reps": "10-15",
+          "equipment": "bodyweight",
+          "rest": "90s",
+          "notes": "Or lying variation"
+        }
+      ]
+    }
+  }
+}
