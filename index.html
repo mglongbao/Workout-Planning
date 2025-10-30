@@ -3,148 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Workout Builder - Professional Training System</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>5-Day Split Workout - Home Training System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <h1>🏋️ Home Workout Builder</h1>
-            <p class="tagline">Professional 5-Day Training System • No Gym Required</p>
+            <h1>🏋️ 5-Day Split Workout</h1>
+            <p class="tagline" id="currentDayHeader">Loading today's workout...</p>
         </header>
 
-        <!-- Introduction -->
-        <section class="intro">
-            <h2>Welcome to Your Complete Home Workout System</h2>
-            <p>This science-based workout system is designed for intermediate athletes who want professional results from home. No barbells or machines required—just dumbbells, bodyweight, and determination.</p>
-
-            <div class="features">
-                <div class="feature">
-                    <h3>📅 5-Day Split</h3>
-                    <p>Optimized muscle group distribution for maximum growth and recovery</p>
-                </div>
-                <div class="feature">
-                    <h3>⏱️ Flexible Duration</h3>
-                    <p>Choose 15, 30, or 60-minute workouts based on your schedule</p>
-                </div>
-                <div class="feature">
-                    <h3>🎯 Equipment Options</h3>
-                    <p>Bodyweight, dumbbell, and calisthenics variations for every exercise</p>
-                </div>
-                <div class="feature">
-                    <h3>📈 Progressive Overload</h3>
-                    <p>Built-in progression system to continuously challenge your muscles</p>
-                </div>
+        <!-- Today's Workout Hero -->
+        <section class="hero-workout">
+            <div class="today-banner" id="todayBanner">
+                <div class="today-label">TODAY'S WORKOUT</div>
+                <h2 id="todayWorkoutTitle">Loading...</h2>
+                <p id="todayWorkoutFocus"></p>
             </div>
         </section>
 
-        <!-- Workout Generator -->
-        <section class="generator">
-            <h2>Generate Your Workout</h2>
-            <p class="subtitle">Select your preferences below to create a customized workout plan</p>
-
-            <div class="controls">
-                <div class="control-group">
-                    <label for="muscleGroup">Muscle Group</label>
-                    <select id="muscleGroup">
-                        <option value="">-- Select Muscle Group --</option>
-                        <option value="chest">Chest</option>
-                        <option value="back">Back</option>
-                        <option value="shoulders">Shoulders</option>
-                        <option value="legs">Legs</option>
-                        <option value="arms">Arms</option>
-                        <option value="core">Core/Abs</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label for="equipment">Equipment Type</label>
-                    <select id="equipment">
-                        <option value="">-- Select Equipment --</option>
-                        <option value="bodyweight">Bodyweight Only</option>
-                        <option value="dumbbell">Dumbbells</option>
-                        <option value="calisthenics">Calisthenics</option>
-                        <option value="all">All Equipment</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label for="duration">Workout Duration</label>
-                    <select id="duration">
-                        <option value="">-- Select Duration --</option>
-                        <option value="15">15 Minutes (Quick & Intense)</option>
-                        <option value="30">30 Minutes (Balanced)</option>
-                        <option value="60">60 Minutes (Full Session)</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label for="difficulty">Difficulty Level</label>
-                    <select id="difficulty">
-                        <option value="">-- Select Level --</option>
-                        <option value="beginner">Beginner</option>
-                        <option value="intermediate">Intermediate</option>
-                        <option value="advanced">Advanced</option>
-                    </select>
-                </div>
+        <!-- Weekly Calendar -->
+        <section class="weekly-calendar">
+            <h2>Your Weekly Split</h2>
+            <div class="calendar-grid" id="calendarGrid">
+                <!-- Days will be generated by JavaScript -->
             </div>
+        </section>
 
-            <button id="generateBtn" class="btn-generate">Generate Workout</button>
+        <!-- Duration Selector -->
+        <section class="duration-selector">
+            <h3>Select Workout Duration</h3>
+            <div class="duration-buttons">
+                <button class="duration-btn" data-duration="15">15 Min<span>Quick</span></button>
+                <button class="duration-btn active" data-duration="30">30 Min<span>Balanced</span></button>
+                <button class="duration-btn" data-duration="60">60 Min<span>Full</span></button>
+            </div>
         </section>
 
         <!-- Workout Display -->
-        <section id="workoutDisplay" class="workout-display hidden">
-            <h2>Your Customized Workout</h2>
+        <section id="workoutDisplay" class="workout-display">
             <div id="workoutContent"></div>
         </section>
 
-        <!-- Exercise Library -->
-        <section class="library">
-            <h2>Exercise Library</h2>
-            <p class="subtitle">Browse exercises by muscle group</p>
-
-            <div class="library-controls">
-                <button class="lib-btn active" data-muscle="all">All Exercises</button>
-                <button class="lib-btn" data-muscle="chest">Chest</button>
-                <button class="lib-btn" data-muscle="back">Back</button>
-                <button class="lib-btn" data-muscle="shoulders">Shoulders</button>
-                <button class="lib-btn" data-muscle="legs">Legs</button>
-                <button class="lib-btn" data-muscle="arms">Arms</button>
-                <button class="lib-btn" data-muscle="core">Core</button>
-            </div>
-
-            <div id="exerciseLibrary" class="exercise-grid"></div>
-        </section>
-
-        <!-- 5-Day Split Information -->
+        <!-- Weekly Overview -->
         <section class="split-info">
-            <h2>Understanding the 5-Day Split</h2>
+            <h2>Your 5-Day Split Overview</h2>
             <div class="days-grid">
                 <div class="day-card">
-                    <h3>Day 1: Chest</h3>
-                    <p>Push-ups, dumbbell presses, flyes, dips</p>
-                    <p class="focus">Focus: Pectoral development</p>
+                    <h3>Monday: Upper Body</h3>
+                    <p>Chest, Back, Shoulders</p>
+                    <p class="focus">Focus: Complete upper body development</p>
                 </div>
                 <div class="day-card">
-                    <h3>Day 2: Back</h3>
-                    <p>Pull-ups, rows, pullovers, lat work</p>
-                    <p class="focus">Focus: Lat width & thickness</p>
+                    <h3>Tuesday: Lower 1</h3>
+                    <p>Quad-focused leg day</p>
+                    <p class="focus">Focus: Quads, glutes, calves</p>
                 </div>
                 <div class="day-card">
-                    <h3>Day 3: Legs</h3>
-                    <p>Squats, lunges, deadlifts, calf raises</p>
-                    <p class="focus">Focus: Quad, hamstring, glute development</p>
+                    <h3>Wednesday: Abs &amp; Cardio</h3>
+                    <p>Core strength and conditioning</p>
+                    <p class="focus">Focus: Core stability and endurance</p>
                 </div>
                 <div class="day-card">
-                    <h3>Day 4: Shoulders & Arms</h3>
-                    <p>Overhead press, lateral raises, curls, extensions</p>
-                    <p class="focus">Focus: Deltoid roundness & arm mass</p>
+                    <h3>Thursday: Push</h3>
+                    <p>Chest, shoulders, triceps</p>
+                    <p class="focus">Focus: Pushing movements</p>
                 </div>
                 <div class="day-card">
-                    <h3>Day 5: Core & Conditioning</h3>
-                    <p>Planks, V-ups, mountain climbers, circuits</p>
-                    <p class="focus">Focus: Core strength & endurance</p>
+                    <h3>Friday: Pull</h3>
+                    <p>Back, biceps, rear delts</p>
+                    <p class="focus">Focus: Pulling movements</p>
+                </div>
+                <div class="day-card">
+                    <h3>Saturday: Lower 2</h3>
+                    <p>Glute and hamstring focus</p>
+                    <p class="focus">Focus: Posterior chain</p>
                 </div>
             </div>
         </section>
@@ -193,11 +127,11 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>Built with science-backed training principles • Track your progress • Stay consistent</p>
+            <p>Built with science-backed training principles - Track your progress - Stay consistent</p>
             <p class="disclaimer">Always consult a physician before starting any exercise program. This is for educational purposes only.</p>
         </footer>
     </div>
 
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
