@@ -749,7 +749,7 @@ body {
     font-family: var(--font-family-base);
     line-height: var(--line-height-normal);
     color: var(--color-text);
-    background: var(--color-background);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-active) 100%);
     min-height: 100vh;
     padding-bottom: var(--space-32);
 }
@@ -768,21 +768,18 @@ body {
     text-align: center;
     margin-bottom: var(--space-24);
     box-shadow: var(--shadow-lg);
-    border: 1px solid var(--color-card-border);
 }
 
 .header h1 {
     font-size: var(--font-size-4xl);
     color: var(--color-primary);
     margin-bottom: var(--space-10);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-tight);
+    font-weight: var(--font-weight-semibold);
 }
 
 .tagline {
     color: var(--color-text-secondary);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
 }
 
 /* Today's Hero Section */
@@ -793,7 +790,6 @@ body {
     text-align: center;
     margin-bottom: var(--space-24);
     box-shadow: var(--shadow-md);
-    border: 1px solid var(--color-card-border);
     position: relative;
     overflow: hidden;
 }
@@ -804,19 +800,19 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: var(--space-4);
-    background: var(--color-primary);
+    height: 5px;
+    background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-active) 100%);
 }
 
 .today-badge {
     display: inline-block;
-    background: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-active) 100%);
     color: var(--color-btn-primary-text);
     padding: var(--space-8) var(--space-20);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
-    letter-spacing: var(--letter-spacing-tight);
+    letter-spacing: 1px;
     margin-bottom: var(--space-20);
 }
 
@@ -825,8 +821,6 @@ body {
     color: var(--color-text);
     margin-bottom: var(--space-10);
     font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-tight);
 }
 
 .today-hero p {
@@ -847,7 +841,6 @@ body {
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-24);
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-card-border);
 }
 
 .weekly-calendar h2 {
@@ -856,8 +849,6 @@ body {
     margin-bottom: var(--space-24);
     text-align: center;
     font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-tight);
 }
 
 .calendar-grid {
@@ -869,28 +860,23 @@ body {
 .day-card {
     background: var(--color-secondary);
     padding: var(--space-20) var(--space-16);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     text-align: center;
     cursor: pointer;
     transition: all var(--duration-normal) var(--ease-standard);
-    border: 2px solid transparent;
+    border: 3px solid transparent;
 }
 
 .day-card:hover {
     background: var(--color-secondary-hover);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-.day-card:focus-visible {
-    outline: none;
-    box-shadow: var(--focus-ring);
+    box-shadow: var(--shadow-sm);
 }
 
 .day-card.active {
-    background: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-active) 100%);
     color: var(--color-btn-primary-text);
-    border-color: var(--color-primary-hover);
+    border-color: var(--color-primary-active);
     transform: scale(1.05);
 }
 
@@ -901,11 +887,11 @@ body {
 }
 
 .day-card.rest-day {
-    background: var(--color-bg-3);
+    background: rgba(var(--color-success-rgb), 0.1);
 }
 
 .day-card.rest-day.active {
-    background: var(--color-success);
+    background: linear-gradient(135deg, var(--color-success) 0%, var(--color-teal-700) 100%);
 }
 
 .day-header {
@@ -919,7 +905,7 @@ body {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-sm);
     color: var(--color-primary);
-    letter-spacing: var(--letter-spacing-tight);
+    letter-spacing: 1px;
 }
 
 .day-icon {
@@ -927,9 +913,9 @@ body {
 }
 
 .day-card h3 {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
     color: var(--color-text);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
     font-weight: var(--font-weight-medium);
 }
 
@@ -945,7 +931,6 @@ body {
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-24);
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-card-border);
 }
 
 .control-group {
@@ -962,8 +947,6 @@ body {
     margin-bottom: var(--space-20);
     text-align: center;
     font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-tight);
 }
 
 /* Equipment Buttons */
@@ -975,8 +958,8 @@ body {
 
 .equipment-btn {
     background: var(--color-secondary);
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-md);
+    border: 3px solid var(--color-border);
+    border-radius: var(--radius-lg);
     padding: var(--space-20) var(--space-16);
     cursor: pointer;
     transition: all var(--duration-normal) var(--ease-standard);
@@ -989,17 +972,12 @@ body {
 .equipment-btn:hover {
     background: var(--color-secondary-hover);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-.equipment-btn:focus-visible {
-    outline: none;
-    box-shadow: var(--focus-ring);
+    box-shadow: var(--shadow-sm);
 }
 
 .equipment-btn.active {
-    background: var(--color-primary);
-    border-color: var(--color-primary-hover);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-active) 100%);
+    border-color: var(--color-primary-active);
     color: var(--color-btn-primary-text);
 }
 
@@ -1011,7 +989,7 @@ body {
 .equipment-btn .btn-text {
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-bold);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
 }
 
 .equipment-btn .btn-desc {
@@ -1034,8 +1012,8 @@ body {
 
 .duration-btn {
     background: var(--color-secondary);
-    border: 2px solid var(--color-border);
-    border-radius: var(--radius-md);
+    border: 3px solid var(--color-border);
+    border-radius: var(--radius-lg);
     padding: var(--space-20) var(--space-24);
     cursor: pointer;
     transition: all var(--duration-normal) var(--ease-standard);
@@ -1048,24 +1026,19 @@ body {
 .duration-btn:hover {
     background: var(--color-secondary-hover);
     transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-}
-
-.duration-btn:focus-visible {
-    outline: none;
-    box-shadow: var(--focus-ring);
+    box-shadow: var(--shadow-sm);
 }
 
 .duration-btn.active {
-    background: var(--color-primary);
-    border-color: var(--color-primary-hover);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-active) 100%);
+    border-color: var(--color-primary-active);
     color: var(--color-btn-primary-text);
 }
 
 .duration-btn .btn-text {
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
 }
 
 .duration-btn .btn-desc {
@@ -1085,14 +1058,13 @@ body {
     border-radius: var(--radius-lg);
     margin-bottom: var(--space-24);
     box-shadow: var(--shadow-sm);
-    border: 1px solid var(--color-card-border);
 }
 
 .workout-header {
     text-align: center;
     margin-bottom: var(--space-24);
     padding-bottom: var(--space-20);
-    border-bottom: 1px solid var(--color-card-border-inner);
+    border-bottom: 2px solid var(--color-border);
 }
 
 .workout-header h2 {
@@ -1100,13 +1072,11 @@ body {
     font-size: var(--font-size-3xl);
     margin-bottom: var(--space-10);
     font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-tight);
 }
 
 #workoutMeta {
     color: var(--color-text-secondary);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-lg);
 }
 
 /* Info Boxes */
@@ -1118,12 +1088,12 @@ body {
 
 .warmup-box {
     background: var(--color-bg-1);
-    border-left: var(--space-4) solid var(--color-primary);
+    border-left: 5px solid var(--color-primary);
 }
 
 .cooldown-box {
     background: var(--color-bg-5);
-    border-left: var(--space-4) solid var(--color-primary);
+    border-left: 5px solid var(--color-teal-700);
 }
 
 .info-box h3 {
@@ -1160,8 +1130,8 @@ body {
 
 .exercise-item {
     background: var(--color-secondary);
-    border: 1px solid var(--color-card-border);
-    border-radius: var(--radius-md);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
     padding: var(--space-20);
     margin-bottom: var(--space-20);
     transition: all var(--duration-normal) var(--ease-standard);
@@ -1169,7 +1139,7 @@ body {
 
 .exercise-item:hover {
     border-color: var(--color-primary);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 5px 15px rgba(var(--color-teal-500-rgb), 0.1);
 }
 
 .exercise-header {
@@ -1180,7 +1150,7 @@ body {
 }
 
 .exercise-number {
-    background: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-active) 100%);
     color: var(--color-btn-primary-text);
     width: 35px;
     height: 35px;
@@ -1189,7 +1159,7 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-xl);
     flex-shrink: 0;
 }
 
@@ -1201,7 +1171,7 @@ body {
 .exercise-title h4 {
     font-size: var(--font-size-xl);
     color: var(--color-text);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-6);
     font-weight: var(--font-weight-medium);
 }
 
@@ -1216,10 +1186,6 @@ body {
     cursor: pointer;
 }
 
-.exercise-checkbox:focus-visible {
-    outline: var(--focus-outline);
-}
-
 .exercise-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -1232,7 +1198,6 @@ body {
     padding: var(--space-12);
     border-radius: var(--radius-base);
     text-align: center;
-    border: 1px solid var(--color-card-border);
 }
 
 .stat-label {
@@ -1249,28 +1214,28 @@ body {
 
 .equipment-badge {
     display: inline-block;
-    padding: var(--space-4) var(--space-12);
+    padding: var(--space-6) var(--space-12);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
-    font-weight: var(--font-weight-medium);
-    margin-top: var(--space-4);
+    font-weight: var(--font-weight-semibold);
+    margin-top: var(--space-6);
 }
 
 .equipment-badge.bodyweight {
-    background: var(--color-bg-1);
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
+    background: rgba(var(--color-success-rgb), 0.1);
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
 }
 
 .equipment-badge.dumbbell {
-    background: var(--color-bg-6);
+    background: rgba(var(--color-warning-rgb), 0.1);
     color: var(--color-warning);
     border: 1px solid var(--color-warning);
 }
 
 .exercise-form {
-    background: var(--color-bg-2);
-    border-left: var(--space-4) solid var(--color-warning);
+    background: rgba(var(--color-warning-rgb), 0.1);
+    border-left: 4px solid var(--color-warning);
     padding: var(--space-16);
     border-radius: var(--radius-sm);
     margin-bottom: var(--space-16);
@@ -1287,22 +1252,113 @@ body {
 
 .youtube-btn {
     display: inline-block;
-    background: var(--color-error);
+    background: var(--color-red-500);
     color: var(--color-white);
     padding: var(--space-12) var(--space-20);
     border-radius: var(--radius-base);
     text-decoration: none;
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
     transition: background var(--duration-normal) var(--ease-standard);
-    margin-top: var(--space-10);
 }
 
 .youtube-btn:hover {
-    background: var(--color-red-500);
+    background: var(--color-red-400);
+    color: var(--color-white);
 }
 
-.youtube-btn:focus-visible {
-    outline: var(--focus-outline);
+/* Exercise Actions */
+.exercise-actions {
+    display: flex;
+    gap: var(--space-16);
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: var(--space-16);
+}
+
+/* Alternatives Section */
+.alternatives-section {
+    position: relative;
+}
+
+.swap-btn {
+    background: var(--color-primary);
+    color: var(--color-btn-primary-text);
+    padding: var(--space-12) var(--space-20);
+    border: none;
+    border-radius: var(--radius-base);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-standard);
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+}
+
+.swap-btn:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(var(--color-teal-500-rgb), 0.3);
+}
+
+.alternatives-dropdown {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background: var(--color-surface);
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-base);
+    padding: var(--space-16);
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    min-width: 250px;
+}
+
+.alternatives-dropdown.hidden {
+    display: none;
+}
+
+.alt-title {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    margin-bottom: var(--space-10);
+    font-size: var(--font-size-base);
+}
+
+.alt-option {
+    display: block;
+    width: 100%;
+    padding: var(--space-10) var(--space-16);
+    margin-bottom: var(--space-8);
+    background: var(--color-secondary);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    text-align: left;
+    cursor: pointer;
+    transition: all var(--duration-fast) var(--ease-standard);
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+}
+
+.alt-option:last-child {
+    margin-bottom: 0;
+}
+
+.alt-option:hover {
+    background: var(--color-primary);
+    color: var(--color-btn-primary-text);
+    border-color: var(--color-primary);
+    transform: translateX(5px);
+}
+
+.swapped-badge {
+    display: inline-block;
+    background: var(--color-success);
+    color: var(--color-btn-primary-text);
+    padding: var(--space-4) var(--space-10);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    margin-left: var(--space-10);
 }
 
 /* Rest Day Message */
@@ -1320,8 +1376,6 @@ body {
     font-size: var(--font-size-4xl);
     margin-bottom: var(--space-20);
     font-weight: var(--font-weight-semibold);
-    line-height: var(--line-height-tight);
-    letter-spacing: var(--letter-spacing-tight);
 }
 
 .rest-activities {
@@ -1334,8 +1388,8 @@ body {
 .rest-card {
     background: var(--color-secondary);
     padding: var(--space-20);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--color-card-border);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-border);
 }
 
 .rest-card h4 {
@@ -1369,7 +1423,7 @@ body {
     font-size: var(--font-size-xl);
     color: var(--color-text-secondary);
     margin-top: var(--space-24);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
 }
 
 /* Footer */
@@ -1379,7 +1433,7 @@ body {
     border-radius: var(--radius-lg);
     text-align: center;
     color: var(--color-text-secondary);
-    border: 1px solid var(--color-card-border);
+    box-shadow: var(--shadow-sm);
 }
 
 .footer p {
@@ -1398,9 +1452,21 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    .container {
+        padding: var(--space-16);
+    }
+    
+    .header {
+        padding: var(--space-24) var(--space-16);
+    }
+    
     .header h1 {
         font-size: var(--font-size-3xl);
+    }
+    
+    .today-hero {
+        padding: var(--space-24) var(--space-16);
     }
     
     .today-hero h2 {
@@ -1408,7 +1474,7 @@ body {
     }
     
     .calendar-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
     
     .equipment-buttons {
@@ -1426,49 +1492,40 @@ body {
     
     .exercise-header {
         flex-wrap: wrap;
+        gap: var(--space-12);
     }
     
     .exercise-title {
         padding: var(--space-10) 0;
+        order: 2;
+        flex-basis: 100%;
     }
     
     .exercise-number {
         margin-bottom: var(--space-10);
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: var(--space-16);
+        order: 1;
     }
     
-    .header {
-        padding: var(--space-24) var(--space-16);
+    .exercise-checkbox {
+        order: 3;
     }
     
-    .header h1 {
-        font-size: var(--font-size-2xl);
+    .exercise-actions {
+        flex-direction: column;
+        align-items: stretch;
     }
     
-    .today-hero {
-        padding: var(--space-24) var(--space-16);
+    .swap-btn,
+    .youtube-btn {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
     
-    .today-hero h2 {
-        font-size: var(--font-size-2xl);
-    }
-    
-    .weekly-calendar {
-        padding: var(--space-24) var(--space-16);
-    }
-    
-    .weekly-calendar h2 {
-        font-size: var(--font-size-2xl);
-    }
-    
-    .calendar-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-12);
+    .alternatives-dropdown {
+        position: static;
+        margin-top: var(--space-10);
+        width: 100%;
     }
     
     .workout-controls {
@@ -1478,28 +1535,11 @@ body {
     .workout-section {
         padding: var(--space-24) var(--space-16);
     }
-    
-    .exercise-header {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-12);
-    }
-    
-    .exercise-title {
-        padding: 0;
-        text-align: center;
-    }
-    
-    .exercise-stats {
+}
+
+@media (max-width: 768px) {
+    .calendar-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .rest-activities {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer {
-        padding: var(--space-20) var(--space-16);
     }
 }
 
@@ -1516,9 +1556,9 @@ body {
 }
 
 .exercise-item {
-    animation: fadeIn var(--duration-normal) var(--ease-standard);
+    animation: fadeIn 0.5s ease-out;
 }
 
 .day-card {
-    animation: fadeIn var(--duration-fast) var(--ease-standard);
+    animation: fadeIn 0.3s ease-out;
 }
